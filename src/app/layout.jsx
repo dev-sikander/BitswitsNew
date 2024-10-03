@@ -1,14 +1,7 @@
-import { Poppins } from "next/font/google";
+import dynamic from "next/dynamic";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ConditionalLayout from "@/src/app/ConditionalLayout";
-import Scripts from "@/src/app/Scripts";
-
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  display: 'swap',
-});
+const Scripts = dynamic(() => import('@/src/app/Scripts'));
 
 //===== Meta Data =====
 export const metadata = {

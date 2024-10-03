@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from 'react';
+import dynamic from "next/dynamic";
 import { usePathname } from 'next/navigation';
-import Header from "@/src/app/layout/header";
-import Footer from "@/src/app/layout/footer";
+const Header = dynamic(() => import('@/src/app/layout/header'));
+const Footer = dynamic(() => import('@/src/app/layout/footer'));
 import '@/src/app/globals.scss'; // custom global scss
 import '@/styles/globals.css'; // custom global css
 
