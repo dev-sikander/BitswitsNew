@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Header from "@/src/app/layout/header";
 import Footer from "@/src/app/layout/footer";
+import '@/src/app/globals.scss'; // custom global scss
+import '@/styles/globals.css'; // custom global css
 
 const styleChange = [
     "/",
@@ -33,8 +35,7 @@ const styleChange = [
     "/case-studies/nutri-snap",
     "/case-studies/home-pro-connect",
     "/contact-us",
-]
-
+];
 const isLightHeader = [
     '/',
     '/mobile-game-development-company',
@@ -78,18 +79,19 @@ const ConditionalLayout = ({ children }) => {
     const [isDark, setIsDark] = useState(true);
     const [isLight, setIsLight] = useState(true);
     const [useAltStyle, setUseAltStyle] = useState(false);
-
     useEffect(() => {
         setIsLight(isLightHeader.includes(pathname) || pathname.startsWith('/case-studies/'));
         setIsDark(isDarkHeader.includes(pathname));
-        setUseAltStyle(styleChange.includes(pathname));
+        if (typeof window !== 'undefined') {
+            const pathname = window.location.pathname;
+            document.body.style.fontFamily = '';
+            if (!styleChange.includes(pathname)) {
+                document.body.style.fontFamily = '"SF-Pro-Display", sans-serif';
+            } else {
+                document.body.style.fontFamily = '"Poppins", sans-serif';
+            }
+        }
     }, [pathname]);
-
-    if (pathname !== useAltStyle) {
-        require('@/styles/globals.css');
-    } else {
-        require('@/src/app/globals.scss');
-    }
     return (
         <>
             <Header isLightHeader={isDark} isDarkHeader={isLight} />
@@ -98,5 +100,4 @@ const ConditionalLayout = ({ children }) => {
         </>
     )
 }
-
 export default ConditionalLayout;

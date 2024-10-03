@@ -13,6 +13,7 @@ import Testimonailslider from "../../components/Testimonailslider";
 import Startaproject from "../../components/Startaproject";
 import Formnewlpnewhome from "../../components/Formnewlpnewhome";
 import SupersaleStiky from "../../components/SupersaleStiky";
+import Headerlphome from "@/src/components/Headerlphome";
 
 export default function Home() {
   const [showDesktopComponents, setShowDesktopComponents] = useState(false);
@@ -54,14 +55,15 @@ export default function Home() {
       window.removeEventListener("scroll", handleTouchOrScroll);
       window.removeEventListener("touchstart", handleTouchOrScroll);
     };
-  }, []); 
+  }, []);
 
   return (
     <>
-      <Appmaking />
+    <Headerlphome />
       {isMobile ? (
         showMobileComponents && (
           <>
+            <Appmaking />
             <Homeslider />
             <ProjectProcesshome processclass="process" />
             <Creative />

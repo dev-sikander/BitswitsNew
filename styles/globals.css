@@ -117,19 +117,16 @@
   font-weight: 600;
 }
 
-* {
-  font-family: "SF-Pro-Display";
-}
-
 html,
 body {
   scroll-behavior: smooth;
 }
 
 body {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+font-family: "SF-Pro-Display" !important;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
 }
 
 img,
@@ -2489,13 +2486,14 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   font-size: 0.8rem;
   margin: 0;
+  line-height: 1.2;
 }
 
-.reviewsWidgetnew .box.google .col div span {
+.reviewsWidgetnew .box.google .colCustom div span {
   color: #ff3067;
 }
 
-.reviewsWidgetnew .box .col div span {
+.reviewsWidgetnew .box .colCustom div span {
   font-size: 15px;
   font-weight: 500;
   line-height: 30px;
@@ -2509,7 +2507,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0;
 }
 
-.reviewsWidgetnew .box .col div {
+.reviewsWidgetnew .box .colCustom div {
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -2568,7 +2566,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0.2rem;
 }
 
-.reviewsSidebar .header .col div {
+.reviewsSidebar .header .colCustom div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2684,7 +2682,7 @@ input::-webkit-inner-spin-button {
   filter: blur();
 }
 
-/* .reviewsWidget .box .col div img {
+/* .reviewsWidget .box .colCustom div img {
   width: 80px;
   height: 15px;
 } */

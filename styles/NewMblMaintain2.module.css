@@ -26,13 +26,16 @@
 .cardImage {
   min-height: 550px;
 }
+
 .cardContent {
   margin-bottom: 30px;
 }
+
 .app {
   background-image: url(../public/newMobilePageImages/card1.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -64,7 +67,8 @@
   height: 530px;
   display: flex;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 0px;
 }
@@ -75,13 +79,16 @@
   height: 530px;
   display: flex;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 0px;
 }
+
 .cardContent {
   margin-bottom: 30px;
 }
+
 .app2 .para {
   color: white;
 }
@@ -142,7 +149,8 @@
   height: 530px;
   display: flex;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 70px;
 }
@@ -178,7 +186,7 @@
 .app5 {
   background-image: url(../public/newMobilePageImages/card6.png);
   background-position: right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding-top: 50px;
   padding-bottom: 20px;
@@ -231,6 +239,7 @@
   .app {
     padding-bottom: 0px !important;
   }
+
   .app5 {
     padding-top: 155px !important;
   }
@@ -262,12 +271,14 @@
   .app4 {
     padding-bottom: 70px;
   }
+
   .custom {
     width: 65%;
   }
 }
 
 @media only screen and (max-width: 1399px) {
+
   .app,
   .app1,
   .app2 {
@@ -309,6 +320,7 @@
 }
 
 @media screen and (max-width: 991px) {
+
   .app1,
   .app {
     -webkit-mask: linear-gradient(#fff 0 0) padding-box,
@@ -407,6 +419,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .app,
   .app1,
   .app2,

@@ -41,7 +41,8 @@
 .app {
   background-image: url(../public/images/lpfund/1.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -64,6 +65,7 @@
   padding-bottom: 20px;
   height: 531px;
 }
+
 .app55 {
   background-image: url(../public/images/lpfund/55.png);
   background-position: center;
@@ -80,7 +82,8 @@
 .app1 {
   background-image: url(../public/images/lpfund/2.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -89,7 +92,8 @@
 .app2 {
   background-image: url(../public/images/lpfund/3.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -215,7 +219,7 @@
 .app4 {
   background-image: url(../public/images/lpfund/5.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -261,7 +265,7 @@
 .app5 {
   background-image: url(../public/images/lpfund/6.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -299,6 +303,7 @@
   .app {
     height: 530px;
   }
+
   .app {
     height: 530px;
   }
@@ -323,6 +328,7 @@
 }
 
 @media only screen and (max-width: 1399px) {
+
   .app,
   .app33,
   .app44,
@@ -404,6 +410,7 @@
 }
 
 @media screen and (max-width: 991px) {
+
   .app1,
   .app {
     -webkit-mask: linear-gradient(#fff 0 0) padding-box,
@@ -514,6 +521,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .book,
   .about {
     font-size: 10px !important;

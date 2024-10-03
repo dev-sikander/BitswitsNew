@@ -179,7 +179,7 @@ const Headerlphome = () => {
 
             <header className={styles.bannerhome} id='home'>
                 <section>
-                    <div className="container pt-4">
+                    {/* <div className="container pt-4">
                         <div className={styles.positionrelative}>
                            
                             <div className="toasNotificationGoogle" data-scroll data-scroll-speed="0.1">
@@ -210,9 +210,9 @@ const Headerlphome = () => {
                            <a href='#testihook' > <li className={show == 'tab4' ? styles.new : ''} onClick={() => fun1('tab4')}><Image alt='BitsWits' src={new4} /></li> </a>
                            <a href='#lastform' ><li className={show == 'tab5' ? styles.new : ''} onClick={() => fun1('tab5')}><Image alt='BitsWits' src={new5} /></li> </a>
                         </ul>
-                    </div>
+                    </div> */}
 
-                    <div className="container" >
+                    <div className="container pt-5" >
                         <div className={styles.backImgmain}>
 
                             <div className={` ${styles.xolpost} row justify-content-center align-content-center align-items-center`}>

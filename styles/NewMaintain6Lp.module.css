@@ -42,7 +42,8 @@
 .app {
   background-image: url(../public/newHomePage/images/pageLp6/icon1.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -56,7 +57,8 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../public/newHomePage/images/pageLp6/icon2.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -65,7 +67,8 @@
 .app2 {
   background-image: url(../public/newHomePage/images/pageLp6/icon3.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 4px;
   padding-bottom: 20px;
   height: 531px;
@@ -197,7 +200,7 @@
 .app4 {
   background-image: url(../public/newHomePage/images/pageLp6/icon5.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -210,7 +213,7 @@
 .app7 {
   background-image: url(../public/newHomePage/images/pageLp6/icon8.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding-top: 50px;
   padding-bottom: 80px;
@@ -244,7 +247,7 @@
 .app5 {
   background-image: url(../public/newHomePage/images/pageLp6/icon6.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -257,7 +260,7 @@
 .app6 {
   background-image: url(../public/newHomePage/images/pageLp6/icon7.png);
   background-position: right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 20px;
   height: 531px;
@@ -400,31 +403,38 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain1.png);
   }
+
   .servSlider .app2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain2.png);
   }
+
   .servSlider .app3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain3.png);
   }
+
   .servSlider .app4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain12.png);
   }
+
   .servSlider .app5 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain5.png);
   }
+
   .servSlider .app6 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain6.png);
     justify-content: flex-end;
   }
+
   .servSlider .app7 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/maintain8_bg.png);
   }
+
   .servSlider .app8 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url(../public/newHomePage/images/newMaintain11.png);
@@ -466,6 +476,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   .book,
   .about {
     font-size: 10px !important;

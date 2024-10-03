@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Scripts />
-      <body className={poppins.className}>
+      <body>
         <ConditionalLayout>
           {children}
         </ConditionalLayout>
