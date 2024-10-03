@@ -1,7 +1,6 @@
 "use client"
 import Head from "next/head";
 import { useEffect } from 'react'
-
 const Scripts = () => {
     // =======================================
     const indexingapi = {
@@ -20,13 +19,22 @@ const Scripts = () => {
     // =======================================
     useEffect(() => {
         const timer = setTimeout(() => {
+            //======== Live Chat ========//
+            window.__lc = window.__lc || {};
+            window.__lc.license = 18644241;
+            window.__lc.integration_name = "manual_onboarding";
+            window.__lc.product_name = "livechat";
+            const livechat = document.createElement("script");
+            livechat.async = true;
+            livechat.src = "https://cdn.livechatinc.com/tracking.js";
+            document.body.appendChild(livechat);
             //======== zenDesk ========//
-            const zenDesk = document.createElement("script");
-            zenDesk.id = "ze-snippet";
-            zenDesk.src = "https://static.zdassets.com/ekr/snippet.js?key=325da280-f4f0-4c80-997f-ea4de45eb2f1";
-            zenDesk.async = true;
-            zenDesk.defer = true;
-            document.body.appendChild(zenDesk);
+            // const zenDesk = document.createElement("script");
+            // zenDesk.id = "ze-snippet";
+            // zenDesk.src = "https://static.zdassets.com/ekr/snippet.js?key=325da280-f4f0-4c80-997f-ea4de45eb2f1";
+            // zenDesk.async = true;
+            // zenDesk.defer = true;
+            // document.body.appendChild(zenDesk);
             //======== GTM Code ========//
             const googleTagManager = document.createElement("script");
             googleTagManager.strategy = "lazyOnload"
@@ -76,8 +84,24 @@ const Scripts = () => {
             `;
             document.head.appendChild(analyticConfigScript);
         }, 3000);
-
         return () => clearTimeout(timer);
+    }, []);
+    
+    useEffect(() => {
+        const handleClick = (event) => {
+            const target = event.target;
+            if (target.href === 'javascript:$zopim.livechat.window.show();') {
+                event.preventDefault(); // Default action se roknay kay liye
+                // Yahan aap apni live chat kholne wali function call kar sakte hain
+                parent.LC_API.open_chat_window(); return false;
+            }
+        };
+        // Event listener add karen
+        document.addEventListener('click', handleClick);
+        // Cleanup function
+        return () => {
+            document.removeEventListener('click', handleClick);
+        };
     }, []);
     // =======================================
     return (
@@ -90,5 +114,4 @@ const Scripts = () => {
         </>
     );
 }
-
 export default Scripts
