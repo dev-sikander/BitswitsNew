@@ -7,19 +7,20 @@ import {
   IndustriesContent, IndustriesSLIDES, FaqsContent,
   FaqsList, IdeaCtaContent, DigitalCtaContent
 } from "@/src/app/home/data/data";
-import Process from "@/src/app/home/process";
-import Banner from "@/src/app/home/banner";
-import CaseStudy from "@/src/app/home/casestudy";
-import CompanyInfo from "@/src/app/home/companyinfo";
-import DigitalCta from "@/src/app/home/digitalcta";
-import ExtendedServices from "@/src/app/home/extendedservices";
-import HomeServices from "@/src/app/home/homeservices";
-import Testimonial from "@/src/app/home/testimonial";
-import Solutions from "@/src/app/home/solutions";
-import Engagement from "@/src/app/home/engagement";
-import Faqs from "@/src/app/home/faqs";
-import IdeaCta from "@/src/app/services/ideacta";
-import Industries from "@/src/app/home/industries";
+import dynamic from "next/dynamic";
+const Process = dynamic(() => import("@/src/app/home/process"));
+const Banner = dynamic(() => import("@/src/app/home/banner"));
+const CaseStudy = dynamic(() => import("@/src/app/home/casestudy"));
+const CompanyInfo = dynamic(() => import("@/src/app/home/companyinfo"));
+const DigitalCta = dynamic(() => import("@/src/app/home/digitalcta"));
+const ExtendedServices = dynamic(() => import("@/src/app/home/extendedservices"));
+const HomeServices = dynamic(() => import("@/src/app/home/homeservices"));
+const Testimonial = dynamic(() => import("@/src/app/home/testimonial"));
+const Solutions = dynamic(() => import("@/src/app/home/solutions"));
+const Engagement = dynamic(() => import("@/src/app/home/engagement"));
+const Faqs = dynamic(() => import("@/src/app/home/faqs"));
+const IdeaCta = dynamic(() => import("@/src/app/services/ideacta"));
+const Industries = dynamic(() => import("@/src/app/home/industries"));
 
 
 const OPTIONS = { loop: true, align: 'center' }
